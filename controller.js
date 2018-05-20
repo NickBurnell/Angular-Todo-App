@@ -28,8 +28,9 @@ function TodoController() {
             completed: false
         }
     ];
-    vm.deleteTask = function() {
+    vm.deleteTask = function(index) {
         console.log('clicked');
+        vm.tasks.splice(index, 1);
     }
 }
 
