@@ -32,6 +32,7 @@ function TodoController() {
         console.log('clicked');
         vm.tasks.splice(index, 1);
     }
+    
 }
 
 angular

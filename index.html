@@ -17,8 +17,8 @@
     <section class="todoCont" ng-controller="TodoController as taskList">
         <h1>TODO List</h1>
         <p>A Place to store the things you have to do!</p>
-        <input type="text" placeholder="Filter your to-dos..">
-        <div class="taskList" ng-repeat="item in taskList.tasks">
+        <input type="text" ng-model="taskList.search" placeholder="Filter your to-dos..">
+        <div class="taskList" ng-repeat="item in taskList.tasks | filter: taskList.search">
             <form>
                 <p>{{ $index + 1 }}.</p>
                 <button type="button" id="completeBtn" ng-if="item.completed === false">Complete</button>

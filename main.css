@@ -38,6 +38,9 @@ h1 {
     height: 40px;
 
 }
+#deleteBtn:hover {
+    color: red;
+}
 .taskList {
     display: flex;
     justify-content: space-between;
