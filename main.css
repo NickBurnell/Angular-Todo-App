@@ -12,7 +12,7 @@ body {
     text-decoration: line-through;
 }
 .todoCont {
-    width: 80%;
+    width: 90%;
     background-color: white;
     margin: 50px auto;
     padding: 20px;
@@ -26,6 +26,8 @@ input {
     margin: 15px 0px;
     outline: none;
     padding: 5px;
+    border-radius: 5px;
+    border: 1px dashed grey;
 }
 h1 {
     font-size: 40px;
@@ -38,6 +40,9 @@ h1 {
     height: 40px;
 
 }
+#deleteBtn {
+    cursor: pointer;
+}
 #deleteBtn:hover {
     color: red;
 }
@@ -46,7 +51,7 @@ h1 {
     justify-content: space-between;
     align-items: center;
 }
-form {
+#taskForm {
     display: flex;
     justify-content: space-between;
     margin: 10px;
@@ -60,10 +65,35 @@ form p {
     border-color: #ff69b4;
     border-radius: 5px;
     padding: 4px;
+    cursor: pointer;
 
+}
+#btnCont {
+    display: flex;
+}
+#editBtn {
+    background-color: white;
+    color: #ff69b4;
+    border-color: #ff69b4;
+    border-radius: 5px;
+    padding: 4px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+#updateBtn {
+    width: 100%;
+    cursor: pointer;
+    color: white;
+    background-color: #ff1493;
+    height: 40px;
 }
 @media screen and (min-width: 768px) {
     .todoCont{
-        width: 30%;
+        width: 60%;
+    }
+}
+@media screen and (min-width: 1000px) {
+    .todoCont{
+        width: 50%;
     }
 }

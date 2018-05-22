@@ -31,7 +31,29 @@ function TodoController() {
     vm.deleteTask = function(index) {
         console.log('clicked');
         vm.tasks.splice(index, 1);
-    }
+    };
+    vm.addTask = (task, completed) => {
+        vm.tasks.push({
+            task: vm.tasks.task,
+            completed: false
+        });
+        vm.tasks.task = "";
+    };
+    vm.completeTask = (index) => {
+        vm.tasks[index].completed = true;
+    };
+    vm.editItem = (index, item) => {
+        vm.showForm = true;
+        vm.tempItem = {
+            task: vm.tasks.task,
+            completed: false
+        };
+        vm.tempIndex = index;
+    };
+    vm.updateItem = (index, item) => {
+        vm.tasks.splice(index, 1, item);
+        vm.showForm = false;
+    };
     
 }
 
