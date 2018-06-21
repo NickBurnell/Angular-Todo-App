@@ -87,6 +87,9 @@ form p {
     background-color: #ff1493;
     height: 40px;
 }
+.tada {
+    animation: tada 2000ms;
+  }
 @media screen and (min-width: 768px) {
     .todoCont{
         width: 60%;

@@ -27,6 +27,7 @@ function TodoController() {
             task: "attend a meet-up",
             completed: false
         }
+        
     ];
     vm.deleteTask = function(index) {
         console.log('clicked');

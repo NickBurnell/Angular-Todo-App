@@ -9,7 +9,7 @@
     <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
 </head>
 
 <body>
@@ -18,7 +18,7 @@
         <h1>TODO List</h1>
         <p>A Place to store the things you have to do!</p>
         <input type="text" ng-model="taskList.search" placeholder="Filter your to-dos..">
-        <div class="taskList" ng-repeat="item in taskList.tasks | filter: taskList.search">
+        <div class="taskList" ng-repeat="item in taskList.tasks | filter: taskList.search" ng-animate"">
             <form id="taskForm">
                 <p>{{ $index + 1 }}.</p>
                 <button type="button" id="completeBtn" ng-click="taskList.completeTask($index)" ng-if="item.completed === false">Complete</button>
@@ -26,7 +26,7 @@
             </form>
             <div id="btnCont">
                 <button type="button" id="editBtn" ng-click="taskList.editItem($index, item);">Edit</button>
-                <i ng-click="taskList.deleteTask($index)" id="deleteBtn" class="material-icons">clear</i>
+                <i ng-click="taskList.deleteTask($index)" id="deleteBtn" class="material-icons animate tada">clear</i>
             </div>
         </div>
         <input type="text" ng-model="taskList.tasks.task" placeholder="Add your to-do..">
@@ -39,6 +39,7 @@
     </section>
 
     <script src="https://code.angularjs.org/1.6.5/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-animate.js"></script>
     <script src="module.js"></script>
     <script src="controller.js"></script>
 </body>
